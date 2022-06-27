@@ -1,0 +1,38 @@
+<!-- team.html -->
+{% extends 'pages/layout.html' %}
+(% load static %)
+
+{% block instructions %}
+<div class="row pt-2 justify-content-center">
+	<div class="col-7 bg-light p-0 m-3 text-center border border-white">
+		 <h4 class="m-0 p-3 bg-warning">What a strong team!<br>Click to try again!</h4>
+	</div>
+</div>
+{% endblock %}
+
+{% block cards %}
+{% for this_pair in pokemon_pairs %}
+<div class="row justify-content-around">
+    {% for pokemon in this_pair %}
+    <div class="col-lg-6 p-2">
+        <div class="card">
+            <div class="row">
+                <div class="col-5 p-0 ps-2">
+                    <img src="{{ pokemon.sprite }}" class="img-fluid p-1" alt="">
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-around pt-2 pb-2">
+                    <h5 class="card-title m-0">{{ pokemon.name }}</h5>
+                    <div>
+                        {% for type in pokemon.types %}
+                        <h6 class="badge pill bg-primary m-0" style="width:112px;height:21px;">{{ type }}</h6>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+
+{% endblock %}

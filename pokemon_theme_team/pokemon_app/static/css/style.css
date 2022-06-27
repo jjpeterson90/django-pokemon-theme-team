@@ -1,0 +1,87 @@
+.root {
+    --poke-normal: #A2A270;
+    --poke-fire: #EC7C2A;
+    --poke-water: #5E88EE;
+    --poke-electric: #F7CD2B;
+    --poke-grass: #73C24B;
+    --poke-ice: #8ED4D4;
+    --poke-fighting: #B82D26;
+    --poke-poison: #9A3C9A;
+    --poke-ground: #DEBD60;
+    --poke-flying: #A38CE7;
+    --poke-psychic: #F65082;
+    --poke-bug: #A1B11D;
+    --poke-rock: #B09A35;
+    --poke-ghost: #6B5293;
+    --poke-dragon: #682EF5;
+    --poke-dark: #6B5144;
+    --poke-steel: #B0B0CA;
+    --poke-fairy: #E58BE5;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.card-img-top {
+    width: 96px;
+    height: 96px;
+}
+
+#background {
+    background-image: url('../img/background.webp');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    /* transition: max-height 30s;
+    transition-timing-function: linear; */
+}
+
+#title {
+    object-fit: cover;
+}
+
+#starter-pokeball {
+    border-radius: 100% 100% 100% 100%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+
+#starter-pokeball button {
+    border-radius: 100% 100% 100% 100%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+
+#starter-pokeball img {
+    width: 100%;
+    transform: scale(1.18, 1.18);
+}
+
+/* #pokeball {
+    width: 96px;
+    height: 96px;
+} */
+
+#starter-pokeball:hover {
+    animation: shake .4s infinite;
+}
+
+@keyframes shake {
+    12% { transform: translate(2px) rotate(4deg);}
+    25% { transform: translate(4px) rotate(8deg);}
+    37% { transform: translate(2px) rotate(4deg);}
+    50% { transform: translate(0px) rotate(0deg);}
+    62% { transform: translate(-2px) rotate(-4deg);}
+    75% { transform: translate(-4px) rotate(-8deg);}
+    87% { transform: translate(-2px) rotate(-4deg);}
+    100% { transform: translate(0px) rotate(0deg);}
+}
+
+#cards {
+    transition: max-height 15s linear;
+    transition-delay: 3s;
+    overflow: hidden;
+}
